@@ -4,7 +4,7 @@ import { FaRegUser, FaBars, FaTimes } from "react-icons/fa";
 import useApi from "../Api/useApi";
 
 export default function Header() {
-  const { data, error } = useApi();
+  const { data } = useApi();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (

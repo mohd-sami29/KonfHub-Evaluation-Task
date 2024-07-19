@@ -10,7 +10,9 @@ function Home() {
     <>
       {error ? (
         <div className="flex justify-center items-center p-4">
-          <p className="text-red-500 text-2xl font-semibold p-4 rounded border border-slate-500">{`${error}`}</p>
+          <p className="text-red-500 text-2xl font-semibold p-4 rounded border border-slate-500">
+            Error: {error.message}
+          </p>
         </div>
       ) : (
         <div className="flex flex-col md:flex-row items-center justify-center p-8">
