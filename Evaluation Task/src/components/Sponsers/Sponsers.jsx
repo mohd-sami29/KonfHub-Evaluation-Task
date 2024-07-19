@@ -4,6 +4,17 @@ import useApi from "../Api/useApi";
 
 function Sponsers() {
   const { data, error } = useApi();
+
+  if (error) {
+    return (
+      <div className="flex justify-center items-center p-4">
+        <p className="text-red-500 text-2xl font-semibold p-4 rounded border border-slate-500">
+          Error: {error.message}
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="container mx-auto p-4">
       <div className="mb-6">
